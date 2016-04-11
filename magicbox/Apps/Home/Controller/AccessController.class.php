@@ -2,6 +2,7 @@
 	namespace Home\Controller;
 	use Think\Controller;
 	
+// add by pxj now
 	class AccessController extends Controller {
 		public function index() {
 			echo "<script> alert('i am index')</script>";
