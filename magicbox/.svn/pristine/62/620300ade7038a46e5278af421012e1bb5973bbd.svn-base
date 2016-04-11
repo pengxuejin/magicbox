@@ -1,0 +1,49 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: loveinbottle
+ * Date: 16-3-29
+ * Time: 下午1:35
+ */
+    namespace Home\Controller;
+    use Think\Controller;
+
+    class StatisticsController extends Controller {
+        public function index() {
+            echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action index"."'); </script>";
+        }
+
+        public function _empty() {
+            echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action _empty"."'); </script>";
+        }
+
+        public function statSales() {
+            // echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action statSales"."'); </script>";
+
+            $salesModel = M('sales_statistics');
+            $field = 'sales_statistics.mac, sales_statistics.price, sales_statistics.sell_count, sales_statistics.sell_at, sales_statistics.goods_id, goods_info.name';
+            $join = array('LEFT JOIN '.'goods_info ON sales_statistics.goods_id = goods_info.id');
+
+            $salesRecord = $salesModel
+                ->field($field)
+                ->join($join)
+                ->order('sales_statistics.id desc')
+                ->page(I('get.p', 1).',7')
+                ->select();
+            $this->assign('salesList', $salesRecord);
+
+            $salesCount = $salesModel->count();
+            $salesPage = new \Think\Page($salesCount, 7);
+            $salesPage->lastSuffix = false;
+            $salesPage->setConfig('prev','上一页');
+            $salesPage->setConfig('next','下一页');
+            $salesPage->setConfig('last','末页');
+            $salesPage->setConfig('first','首页');
+            $salesPage->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+            $salesPage->setConfig('header',"<li class='rows'>共<b>%TOTAL_ROW%</b>条销售记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>");
+            $this->assign('salesPage',$salesPage->show());
+
+            $this->assign('username', $_COOKIE['username']);
+            $this->display();
+        }
+    }

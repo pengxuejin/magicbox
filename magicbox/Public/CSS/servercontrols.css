@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+/* radiobutton 所用样式***********************************************  */
+.radiotable input
+{
+    margin-left:10px;
+}
+
+.radiotable Label
+{
+    display:inline;
+    margin-bottom: 5px;
+    color: #313131;
+    margin-left:5px;
+}
+/* radiobutton 所用样式结束*********************************************** */

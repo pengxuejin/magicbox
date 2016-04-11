@@ -1,0 +1,155 @@
+[ 2016-03-29T10:14:10+08:00 ] 192.168.1.99 /magicbox/home/version/versionlist.html
+ERR: 模板不存在:./Apps/Home/View/Version/versionlist.html
+
+[ 2016-03-29T11:42:38+08:00 ] 127.0.0.1 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T11:44:00+08:00 ] 127.0.0.1 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion /var/www/html/magicbox/Apps/Home/Controller/GoodsController.class.php 第 108 行.
+
+[ 2016-03-29T11:44:58+08:00 ] 127.0.0.1 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion /var/www/html/magicbox/Apps/Home/Controller/GoodsController.class.php 第 108 行.
+
+[ 2016-03-29T11:46:21+08:00 ] 127.0.0.1 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T11:47:06+08:00 ] 192.168.1.99 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T11:49:09+08:00 ] 127.0.0.1 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+NOTIC: [8] Undefined index: savepath /var/www/html/magicbox/Apps/Home/Controller/GoodsController.class.php 第 108 行.
+
+[ 2016-03-29T11:51:05+08:00 ] 192.168.1.99 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T11:52:45+08:00 ] 192.168.1.99 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T11:53:34+08:00 ] 192.168.1.99 /magicbox/home/goods/upload.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /var/www/html/magicbox/ThinkPHP323/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-03-29T14:22:57+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 无法加载控制器:Statistics
+
+[ 2016-03-29T14:56:57+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column 'goods_info.goods_id' in 'where clause'
+ [ SQL语句 ] : SELECT sales_statistics.*,goods_info.price FROM `sales_statistics` `sales_statistics`,`goods_info` `goods_info` WHERE ( sales_statistics.goods_id=goods_info.goods_id ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T14:57:50+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `` LIMIT 1  
+
+[ 2016-03-29T14:59:29+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column 'goods_info.goods_name' in 'field list'
+ [ SQL语句 ] : SELECT sales_statistics.*,goods_info.goods_name FROM `sales_statistics` `sales_statistics`,`goods_info` `goods_info` WHERE ( sales_statistics.goods_id=goods_info.id ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T15:06:20+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1052:Column 'id' in order clause is ambiguous
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,goods_info.name FROM `sales_statistics` INNER JOIN goods_info on sales_statistics.goods_id = goods_info.id  ORDER BY id desc LIMIT 0,7  
+
+[ 2016-03-29T15:30:57+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:07+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:07+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:33:43+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:35:01+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1146:Table 'magicbox.goods_info,' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `goods_info,`
+
+[ 2016-03-29T15:38:14+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column 'sales_statistics.mac' in 'field list'
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,goods_info.name FROM goods_info info,sales_statistics sales ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:25:41+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1305:FUNCTION magicbox.I does not exist
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( mac = I('post.macType', '') ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:26:08+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1305:FUNCTION magicbox.I does not exist
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = I('post.macType', '') ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:27:03+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column '$macType' in 'where clause'
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = $macType ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:29:16+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':e0:61:4c:82:4c ) ORDER BY sales_statistics.id desc LIMIT 0,7' at line 1
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = 00:e0:61:4c:82:4c ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:29:46+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column '$macType' in 'where clause'
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = $macType ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:31:54+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column '$macType' in 'where clause'
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = $macType ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:33:36+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':e0:61:4c:82:4c. ) ORDER BY sales_statistics.id desc LIMIT 0,7' at line 1
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE ( sales_statistics.mac = .00:e0:61:4c:82:4c. ) ORDER BY sales_statistics.id desc LIMIT 0,7  
+
+[ 2016-03-29T17:35:22+08:00 ] 127.0.0.1 /magicbox/home/statistics/statsales.html
+ERR: 1054:Unknown column 'sales_statisticsmac' in 'where clause'
+ [ SQL语句 ] : SELECT sales_statistics.mac,sales_statistics.price,sales_statistics.sell_count,sales_statistics.sell_at,sales_statistics.goods_id,goods_info.name FROM `sales_statistics` LEFT JOIN goods_info ON sales_statistics.goods_id = goods_info.id  WHERE `sales_statisticsmac` = '00:e0:61:4c:82:4c' ORDER BY sales_statistics.id desc LIMIT 0,7  
+

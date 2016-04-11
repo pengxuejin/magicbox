@@ -1,0 +1,13 @@
+<html>
+<!--<head>-->
+    <!--<block name="title"><title>标题1111</title></block>-->
+<!--</head>-->
+<extend name="test1" />
+<block name="menu">menu2211</block>
+<block name="menu">
+    <p>1234</p>
+</block>
+<!--<body>-->
+<!--<p>1234</p>-->
+<!--</body>-->
+</html>

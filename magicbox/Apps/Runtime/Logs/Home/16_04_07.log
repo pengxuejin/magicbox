@@ -1,0 +1,9 @@
+[ 2016-04-07T09:44:46+08:00 ] 127.0.0.1 /magicbox/home/advs/advsupdate.html
+ERR: 模板不存在:./Apps/Home/View/Advs/advsupdate.html
+
+[ 2016-04-07T09:53:03+08:00 ] 127.0.0.1 /magicbox/home/advs/advsupdate.html
+ERR: XML标签语法错误 : condition="$vo.upgradetype < 5 "
+
+[ 2016-04-07T09:53:28+08:00 ] 127.0.0.1 /magicbox/home/advs/advsupdate.html
+ERR: XML标签语法错误 : condition="{$vo.upgradetype} < 5 "
+

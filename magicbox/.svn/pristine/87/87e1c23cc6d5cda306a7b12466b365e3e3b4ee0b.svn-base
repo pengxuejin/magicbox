@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html >
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>路由器生产管理 - 路由器版本列表 - </title>
+    <css href="__PUBLIC__/CSS/root.css" />
+</head>
+<body>
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START TOP -->
+<div id="top" class="clearfix">
+
+    <!-- Start App Logo -->
+    <div class="applogo">
+        <a href="index.html" class="logo">武汉大博</a>
+    </div>
+    <!-- End App Logo -->
+
+    <!-- Start Top Right -->
+    <ul class="top-right">
+        <li class="dropdown link">Hi, {$username}</li>
+        <li class="dropdown link">
+            <a href="{:U('access/logout')}" data-toggle="dropdown" class="dropdown-toggle profilebox"><b>安全退出</b></a>
+        </li>
+    </ul>
+    <!-- End Top Right -->
+
+</div>
+<!-- END TOP -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START SIDEBAR -->
+<div class="sidebar clearfix">
+    <ul class="sidebar-panel nav">
+        <li class="sidetitle">大博云柜</li>
+        <li><a href="{:U('version/versionlist')}">云柜版本列表</a></li>
+        <li><a href="{:U('version/versionadd')}">新增云柜版本</a></li>
+    </ul>
+    <ul class="sidebar-panel nav">
+        <li class="sidetitle">云柜商品</li>
+        <li><a href="{:U('goods/goodslist')}">注册商品列表</a></li>
+        <li><a href="{:U('goods/goodsadd')}">新增注册商品</a></li>
+    </ul>
+    <ul class="sidebar-panel nav">
+        <li class="sidetitle">云柜统计</li>
+        <!--<li><a href="#" class="active"><span class="icon color9"><i class="fa fa-th" ></i></span>注册商品列表</a>-->
+        <li><a href="#" class="active">销售统计列表</a></li>
+    </ul>
+</div>
+<!-- END SIDEBAR -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START CONTENT -->
+<div class="content">
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START CONTAINER -->
+    <div class="container-padding">
+        <!-- Start Row -->
+        <div class="row">
+            <!-- Start Panel -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-title">销售统计列表</div>
+                    <div class="panel-body table-responsive">
+                        <table id="example" class="table display">
+                            <thead>
+                            <tr>
+                                <th>云柜Mac</th>
+                                <th>商品名称</th>
+                                <th>商品金额</th>
+                                <th>销售数量</th>
+                                <th>销售时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="salesList" id="vo">
+                                <tr>
+                                    <td style="min-width: 30px; max-width: 30px; word-break: break-all;">{$vo.mac}</td>
+                                    <td>{$vo.name}</td>
+                                    <td>{$vo.price}</td>
+                                    <td>{$vo.sell_count}</td>
+                                    <td style="min-width: 60px; max-width: 60px; word-break: break-all;">{$vo.sell_at}</td>
+                                </tr>
+                            </volist>
+                            <tr><td colspan="9" align="center" height="45">{$salesPage}</td></tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Panel -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- Start Footer -->
+    <div class="row footer">
+        <div class="col-md-6 text-left">
+            Copyright © 2015 <a href="http://www.daboowifi.com/" target="_blank">武汉大博</a> All rights reserved.
+        </div>
+        <div class="col-md-6 text-right">
+            Design and Developed by <a href="http://www.daboowifi.com/" target="_blank">武汉大博</a>
+        </div>
+    </div>
+    <!-- End Footer -->
+</div>
+<!-- End Content -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- ================================================
+jQuery Library
+================================================ -->
+<script src="__PUBLIC__/JS/jquery.min.js"></script>
+<!-- ================================================
+Bootstrap Core JavaScript File
+================================================ -->
+<script src="__PUBLIC__/JS/bootstrap/bootstrap.min.js"></script>
+<!-- ================================================
+Plugin.js - Some Specific JS codes for Plugin Settings
+================================================ -->
+<script src="__PUBLIC__/JS/plugins.js"></script>
+<!-- ================================================
+Data Tables
+================================================ -->
+<script src="__PUBLIC__/JS/datatables/datatables.min.js"></script>
+<js href="__PUBLIC__/JS/jquery.js" />
+<script>
+    $(document).ready(function() {
+        //$('#example0').DataTable();
+    } );
+</script>
+<script>
+    $(document).ready(function() {
+    } );
+</script>
+</body>
+</html>

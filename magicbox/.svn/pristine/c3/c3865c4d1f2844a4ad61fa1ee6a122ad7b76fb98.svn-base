@@ -1,0 +1,36 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>管理后台-大博云柜</title>
+    <link rel="stylesheet" type="text/css" href="/server/Public/CSS/signin.css" />
+    <link rel="stylesheet" type="text/css" href="/server/Public/CSS/xinxing.css" />
+    <script type="text/javascript" src="/server/Public/JS/jquery.js"></script>
+    <script type="text/JavaScript">
+        function loginCheck() {
+            if ("" == document.getElementById("username").value) {
+                alert("请输入用户名");
+                return false;
+            }
+
+            if ("" == document.getElementById("password").value) {
+                alert("请输入密码");
+                return false;
+            }
+            return true;
+        }
+
+        $(function () {
+        });
+    </script>
+</head>
+<body>
+<!--<form action="/server/Home/Access/logining" method="post" class="form-signin" role="form">-->
+<form action="<?php echo U('access/logining');?>" method="post" onsubmit="return loginCheck();" class="form-signin" role="form">
+    <h2 class="form-signin-heading">大博云柜系统后台</h2>
+    <input name="username" id="username" class="form-control" placeholder="账号" autofocus/>
+    <input name="xin" type="hidden"/>
+    <input name="password" id="password" type="password" class="form-control" placeholder="密码"/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+</form>
+</body>
+</html>

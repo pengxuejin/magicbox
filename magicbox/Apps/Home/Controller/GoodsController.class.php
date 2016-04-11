@@ -1,0 +1,118 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: loveinbottle
+ * Date: 16-3-24
+ * Time: 下午1:12
+ */
+    namespace Home\Controller;
+    use Think\Controller;
+
+    class GoodsController extends BaseController {
+        public function _before_goodsList() {
+            // echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action _before_goodsList"."'); </script>";
+            if (empty($_COOKIE["username"])) {
+                cookie('preurl', U('goods/goodslist'));
+                $this->error('请登录', U('access/login'), 2);
+            }
+        }
+        public function goodsList() {
+            // echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action goodsList"."') </script>";
+
+            $goodsModel = M('goods_info'); // 实例化User对象
+            // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+            // 注意I('get.p') 与 $_GET[p]的区别
+            $goodsRecord = $goodsModel->order('id desc')->page(I('get.p', 1).',4')->select();
+            // $list = $goodsModel->order('id')->page($_GET['p'].',4')->select();
+            // var_dump($goodsModel->getLastSql());
+            $this->assign('goodsList',$goodsRecord);// 赋值数据集
+            $goodsCount = $goodsModel->count();// 查询满足要求的总记录数
+            $goodsPage = new \Think\Page($goodsCount,4);// 实例化分页类 传入总记录数和每页显示的记录数
+            // $Page->lastSuffix = false;
+            $goodsPage->setConfig('prev','上一页');
+            $goodsPage->setConfig('next','下一页');
+            $goodsPage->setConfig('last','末页');
+            $goodsPage->setConfig('first','首页');
+            $goodsPage->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+            $goodsPage->setConfig('header',"<li class='rows'>共<b>%TOTAL_ROW%</b>个注册商品&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>");
+            $this->assign('page',$goodsPage->show());
+            $this->assign('username', $_COOKIE['username']);
+            $this->display();
+        }
+
+        public function _before_goodsAdd() {
+            if (empty($_COOKIE["username"])) {
+                cookie('preurl', U('goods/goodsadd'));
+                $this->error('请登录', U('access/login'), 2);
+            }
+        }
+        public function goodsAdd() {
+            $this->assign('username', $_COOKIE['username']);
+            $this->display();
+        }
+
+        public function newgoodsadd() {
+            $goodsData['picture'] = I('post.goodsPhotoPath', '');
+            $goodsData['type'] = I('post.goodsType', '');
+            $goodsData['name'] = I('post.goodsName', '');
+            $goodsData['price'] = I('post.goodsPrice', '');
+            $goodsData['introduce'] = I('post.goodsIntro', '');
+            if (empty($goodsData['picture'])) {
+                $this->error('商品图片不能为空');
+            }
+            if (empty($goodsData['type'])) {
+                $this->error('商品类型不能为空');
+            }
+            if (empty($goodsData['name'])) {
+                $this->error('商品名称不能为空');
+            }
+            if (empty($goodsData['price'])) {
+                $this->error('商品价格不能为空');
+            }
+            if (empty($goodsData['introduce'])) {
+                $this->error('商品介绍不能为空');
+            }
+
+            $versionModel = M('goods_info');
+            if ($versionModel->data($goodsData)->add()) {
+                $this->success('新增注册商品成功', U('goods/goodslist'), 0);
+            } else {
+                $this->error('新增注册商品失败');
+            }
+        }
+
+        public function upload() {
+            // echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action upload"."') </script>";
+
+            $upload = new \Think\Upload();  // 实例化上传类
+            $upload->maxSize = 3145728;     // 设置附件上传大小
+            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');     // 设置附件上传类型
+            $upload->rootPath = './Public/Uploads/';
+            $upload->savePath = 'Pics/';
+            $upload->autoSub = true;
+            $upload->subName = array('date', 'Ymd');
+            // $upload->subName = 'get_user_id';
+            // 上传文件
+            $info = $upload->upload();
+            if (!$info) {// 上传错误提示错误信息
+                echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action up222load"."') </script>";
+                $this->error($upload->getError());
+            } else {
+                // $info['savePaths'] = $upload->rootPath .$upload->savePath;
+                $info['savePaths'] = C('PICS_SOURCE');
+                // var_dump($info);
+                // foreach ($info as $file) {
+                //     echo $file['savepath'].$file['savename'];
+                // }
+                // $this->error('123');
+                // $info1 = $upload->getUploadFileInfo();
+                // var_dump($info1);
+                $this->ajaxReturn($info, 'JSON');
+                // $this->success('123', U('version/versiontest'), true);
+                //$this->success('上传成功');
+                //$this->assign('info', $info);
+                //$this->display('Goods:goodsAdd');
+            }
+        }
+    }
+?>

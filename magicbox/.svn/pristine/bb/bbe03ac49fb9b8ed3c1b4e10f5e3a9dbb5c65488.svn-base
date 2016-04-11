@@ -1,0 +1,26 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: loveinbottle
+ * Date: 16-3-29
+ * Time: 下午1:35
+ */
+    namespace Home\Controller;
+    use Think\Controller;
+
+    class StatisticsController extends Controller {
+        public function index() {
+            echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action index"."'); </script>";
+        }
+
+        public function _empty() {
+            echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action _empty"."'); </script>";
+        }
+
+        public function statSales() {
+            // echo "<script> alert('"."i am controller " .CONTROLLER_NAME. " action statSales"."'); </script>";
+
+            $this->assign('username', $_COOKIE['username']);
+            $this->display();
+        }
+    }
